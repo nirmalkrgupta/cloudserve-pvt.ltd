@@ -1,0 +1,237 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+.page-header {
+  background-color: #ffffff;
+  padding: 0px 40px;
+  padding-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.page-header h1 {
+
+  margin: 0;
+  color: red;
+  font-size: 2.5rem;
+}
+
+/* Company Details */
+.company-details {
+  color: #000000;
+  padding: 40px 20px;
+  text-align: left;
+}
+
+.company-info p a:hover {
+    color: #ff0000;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.company-row {
+  color: black;
+  display: flex;
+  justify-content: left;
+  align-items: self-start;
+
+}
+
+.logo {
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.company-info h3 {
+  margin: 0 0 10px;
+  color: #000000;
+}
+
+.company-info p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.company-info a {
+  color: #000000;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.company-info a:hover {
+  text-decoration: underline;
+  color: #d40000;
+}
+
+/* Owner Details */
+.owner-details {
+  background-color: #eeeeee;
+  padding: 40px 20px;
+}
+
+.owner-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.owner-row .profile {
+  width: 170px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.owner-row .profile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.owner-info h3 {
+  margin: 0;
+  color: #fc0000;
+}
+
+.owner-info p {
+  margin: 8px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+  background: url('Images/background.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form h2 {
+  text-align: center;
+  color: #fc0000;
+}
+
+.hes {
+  text-align: center;
+  color: #000;
+  margin-top: -10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #fc0000;
+  box-shadow: 0 0 5px rgba(252, 0, 0, 0.3);
+}
+
+.contact-form button {
+  padding: 15px;
+  background-color: #fc0000;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #d40000;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: #fff;
+}
+
+/* Fade-in keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animations */
+.page-header,
+.owner-details,
+.contact-form-section,
+footer {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+.page-header { animation-delay: 0.2s; }
+.owner-details { animation-delay: 0.4s; }
+.contact-form-section { animation-delay: 0.6s; }
+footer { animation-delay: 0.8s; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-header {
+    padding-top: 25px;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  p{
+    font-size: 15px;
+    text-align: left;
+  }
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .company-row,
+  .owner-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+}
