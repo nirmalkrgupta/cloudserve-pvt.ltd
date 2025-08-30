@@ -47,7 +47,6 @@ header {
 .navbar-toggler {
   border: none;
   outline: none;
-  background: transparent;
 }
 .navbar-toggler:focus,
 .navbar-toggler:active,
