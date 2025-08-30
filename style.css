@@ -42,6 +42,47 @@ header {
   cursor: pointer;
 }
 
+/* Hide Bootstrap’s default hamburger icon */
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.custom-toggler:focus,
+.custom-toggler:active {
+  box-shadow: none !important;
+  border: none !important;
+  background: transparent !important;
+}
+.navbar-toggler-icon {
+  background-image: none !important;
+}
+
+.navbar-toggler span {
+  background: none;
+  border: none;
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+/* When toggler is active (menu open) */
+.navbar-toggler.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.navbar-toggler.active span:nth-child(2) {
+  opacity: 0;
+}
+.navbar-toggler.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
 /* ================= HERO ================= */
 .hero {
   color: #000;
@@ -215,12 +256,12 @@ header {
 }
 /* ================= RESPONSIVE ================= */
 @media(max-width: 768px) {
-  .logo { width: 100px; }
+  .logo { margin: 2px; width: 100px; }
   .hero-container { flex-direction: column; text-align: center; }
   .hero-text { max-width: 100%; }
   .hero-image img { margin-top: 40px; width: 250px; }
   .contact {color: red; padding: 40px 15px; }
-  .navbar-nav {gap: 8px;}
+  .navbar-nav { gap: 8px; display: flex; justify-content: right; align-items: flex-end; padding-right: 5px; padding-bottom: 10px;}
 }
 
 
