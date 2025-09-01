@@ -177,10 +177,15 @@ body {
 /* Footer */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 15px;
   background-color: #222;
   color: #fff;
 }
+.logos{
+    display: flex; justify-content:center; gap: 25px;
+    padding: 0;
+    margin: 0;
+  }
 
 /* Fade-in keyframes */
 @keyframes fadeInUp {
